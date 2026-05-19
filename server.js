@@ -354,12 +354,12 @@ app.post('/api/valuation', async (req, res) => {
 const distPath = path.join(__dirname, 'dist');
 if (fs.existsSync(distPath)) {
     app.use(express.static(distPath));
-    app.get('*', (req, res) => {
+    app.get(/.*/, (req, res) => {
         res.sendFile(path.join(distPath, 'index.html'));
     });
 } else {
     // If not built yet, warn and serve message
-    app.get('*', (req, res) => {
+    app.get(/.*/, (req, res) => {
         res.send('Frontend static files not found. Please build the frontend first via "npm run build".');
     });
 }
