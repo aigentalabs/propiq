@@ -1,0 +1,7 @@
+{
+  "name": "Tasador de Propiedades optimizado V 2.0",
+  "description": "Una aplicación impulsada por IA para tasar propiedades en Argentina analizando zonas de influencia, listados comparables y características de la propiedad mediante análisis multimodal.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
